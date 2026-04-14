@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Search Results | Culinary Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff4f3",
+                    "on-error-container": "#570008",
+                    "primary-dim": "#8d3100",
+                    "on-secondary-fixed-variant": "#12661e",
+                    "on-secondary-fixed": "#00460e",
+                    "surface-container-highest": "#ffd2d0",
+                    "surface-variant": "#ffd2d0",
+                    "surface-dim": "#ffc7c4",
+                    "on-tertiary-container": "#523700",
+                    "background": "#fff4f3",
+                    "on-primary-container": "#431300",
+                    "error-dim": "#9f0519",
+                    "on-error": "#ffefee",
+                    "error": "#b31b25",
+                    "tertiary": "#7b5400",
+                    "surface-container-low": "#ffedeb",
+                    "tertiary-container": "#feb300",
+                    "primary-container": "#ff793e",
+                    "tertiary-fixed": "#feb300",
+                    "primary-fixed-dim": "#f56724",
+                    "inverse-surface": "#240304",
+                    "secondary": "#176a21",
+                    "surface-tint": "#a13900",
+                    "secondary-fixed": "#9df197",
+                    "tertiary-dim": "#6b4900",
+                    "inverse-primary": "#fc6c29",
+                    "primary": "#a13900",
+                    "surface-container-high": "#ffdad8",
+                    "tertiary-fixed-dim": "#eda600",
+                    "on-tertiary-fixed": "#382400",
+                    "secondary-fixed-dim": "#90e28a",
+                    "on-primary": "#ffefea",
+                    "inverse-on-surface": "#ce8c89",
+                    "on-secondary-container": "#005c15",
+                    "on-surface": "#4e2120",
+                    "secondary-container": "#9df197",
+                    "on-primary-fixed": "#000000",
+                    "outline": "#a26765",
+                    "on-surface-variant": "#834c4b",
+                    "error-container": "#fb5151",
+                    "on-tertiary-fixed-variant": "#5e4000",
+                    "on-primary-fixed-variant": "#521900",
+                    "primary-fixed": "#ff793e",
+                    "surface-bright": "#fff4f3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#d1ffc8",
+                    "on-tertiary": "#fff1df",
+                    "secondary-dim": "#025d16",
+                    "surface-container": "#ffe1e0",
+                    "outline-variant": "#e09c99",
+                    "on-background": "#4e2120"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff4f3]/80 backdrop-blur-2xl shadow-[0_4px_48px_rgba(78,33,32,0.04)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-8 flex-1">
+<span class="text-2xl font-extrabold tracking-tight text-[#4e2120] shrink-0">Culinary Canvas</span>
+<!-- Search Bar with Contextual Value -->
+<div class="hidden md:flex items-center bg-surface-container-highest px-4 py-2 rounded-full w-full max-w-md gap-3 focus-within:ring-2 ring-primary/30 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-on-surface font-medium w-full" placeholder="Search for flavors..." type="text" value="Sushi"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-[#FF5722] font-bold border-b-2 border-[#FF5722] pb-1" href="#">Browse</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] transition-all" href="#">Offers</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] transition-all" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-white/50 rounded-full transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface">shopping_cart</span>
+</button>
+<button class="flex items-center gap-2 bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-bold shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span>Sign In</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-28 pb-20 max-w-7xl mx-auto px-8 flex gap-12">
+<!-- Left Sidebar: Filters -->
+<aside class="hidden lg:block w-72 shrink-0">
+<div class="sticky top-28 space-y-10">
+<div>
+<h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+                        Refine Search
+                    </h3>
+<!-- Cuisine Filter -->
+<div class="mb-8">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 block mb-4">Cuisine</span>
+<div class="space-y-3">
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="flex items-center gap-3">
+<input checked="" class="w-5 h-5 rounded border-none bg-surface-container-high text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="font-medium text-primary">Japanese</span>
+</span>
+<span class="text-xs bg-surface-container-low px-2 py-1 rounded-full text-on-surface-variant">24</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-none bg-surface-container-high text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="font-medium text-on-surface-variant group-hover:text-on-surface transition-colors">Italian</span>
+</span>
+<span class="text-xs bg-surface-container-low px-2 py-1 rounded-full text-on-surface-variant">18</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-none bg-surface-container-high text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="font-medium text-on-surface-variant group-hover:text-on-surface transition-colors">Chinese</span>
+</span>
+<span class="text-xs bg-surface-container-low px-2 py-1 rounded-full text-on-surface-variant">12</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer">
+<span class="flex items-center gap-3">
+<input class="w-5 h-5 rounded border-none bg-surface-container-high text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="font-medium text-on-surface-variant group-hover:text-on-surface transition-colors">Thai</span>
+</span>
+<span class="text-xs bg-surface-container-low px-2 py-1 rounded-full text-on-surface-variant">9</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div class="mb-8">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 block mb-4">Price Range</span>
+<div class="flex gap-2">
+<button class="flex-1 py-2 rounded-full bg-surface-container-highest font-bold text-on-surface active:scale-95 transition-all">$</button>
+<button class="flex-1 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-all">$$</button>
+<button class="flex-1 py-2 rounded-full bg-surface-container-highest font-bold text-on-surface active:scale-95 transition-all">$$$</button>
+<button class="flex-1 py-2 rounded-full bg-surface-container-highest font-bold text-on-surface active:scale-95 transition-all">$$$$</button>
+</div>
+</div>
+<!-- Rating Filter -->
+<div class="mb-8">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant/60 block mb-4">Rating</span>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-none bg-surface-container-high text-primary focus:ring-primary/20" name="rating" type="radio"/>
+<div class="flex items-center gap-1 text-on-surface-variant group-hover:text-on-surface">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-medium">4.5 &amp; Above</span>
+</div>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 border-none bg-surface-container-high text-primary focus:ring-primary/20" name="rating" type="radio"/>
+<div class="flex items-center gap-1 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-medium">4.0 &amp; Above</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Special Offers -->
+<div class="pt-6">
+<div class="bg-gradient-to-br from-primary-container to-primary p-6 rounded-lg text-on-primary relative overflow-hidden group">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl opacity-10 group-hover:scale-110 transition-transform">percent</span>
+<p class="font-headline font-bold text-lg leading-tight mb-2">Unlock Chef Deals</p>
+<p class="text-xs opacity-90 mb-4">Get up to 40% off on your first sushi order today.</p>
+<button class="bg-on-primary text-primary px-4 py-2 rounded-full text-xs font-bold w-full active:scale-95 transition-all">View Offers</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1">
+<header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-primary font-bold text-sm mb-2">
+<span class="material-symbols-outlined text-base">location_on</span>
+<span>Delivering to Downtown, NY</span>
+</div>
+<h1 class="text-4xl font-extrabold tracking-tight">Best <span class="text-primary italic">Sushi</span> in your area</h1>
+<p class="text-on-surface-variant mt-2">Showing 24 top-rated restaurants matching your search.</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium text-on-surface-variant">Sort by:</span>
+<button class="bg-surface-container-low px-4 py-2 rounded-full font-bold text-sm flex items-center gap-2 hover:bg-surface-container-high transition-colors">
+                        Relevance
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</header>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Restaurant Card 1 (Bento Grid Style Featured) -->
+<article class="md:col-span-2 group relative bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-500 hover:shadow-[0_24px_48px_rgba(78,33,32,0.08)]">
+<div class="flex flex-col md:flex-row h-full">
+<div class="relative md:w-3/5 h-64 md:h-auto overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Premium close-up of a diverse sushi platter with fresh salmon, tuna, and avocado rolls on a dark slate background, warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOwlt8Lfw4FWb1eHKa_tfKgh0jdRqz45JIHVPf87l0_OmPVgfAUppcikOrhep281z_Dxh8hsgRZ5b5B3ckJu9eTScxPgL2pdnbbd0n9ZkWnGELt8mkdgRjQUa88sB3JslsGncE4ErXszU2sPwW8fKU4UQMbODxIOTbqNyzhIBdEyNsCncfBdeXLEXUrBMcq8ZUvW9o9kzRQ-bJ4BkX8ydIyL8gR8r5_fL3a5BPXcyfflu9aMg9h7xtDbdNOn18GUfI3f5VD3UyWWM"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md bg-opacity-90">Must Try</span>
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold">Featured</span>
+</div>
+</div>
+<div class="p-8 md:w-2/5 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="text-2xl font-bold">Orizuru Sushi Lab</h2>
+<div class="flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Fusion • Omakase • Sustainable Sourcing</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="text-xs bg-surface-container-low px-3 py-1 rounded-full font-medium italic">"The dragon roll is legendary"</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="text-sm font-medium">
+<span class="text-secondary font-bold">$15.00</span> Delivery
+                                    <span class="mx-2 text-outline-variant">•</span> 25-35 min
+                                </div>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center group-hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Regular Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_12px_24px_rgba(78,33,32,0.06)] group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Artistic overhead shot of spicy tuna rolls decorated with thin slices of jalapeno and microgreens on a white ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBdbjVFb9Qd7NYhn40jVpCCal0zD_HtByjZLnqmHhfLuR4EYAubSKxXeeGYlJXZQXWN6S-bS2lGARJBKId2Q5SfVsJesCBKloAkyL-YD4NSUUdRrC8G-r1GyYVhUfS1JD23lSA6-9PuIU4tXCan9cr8Sfec09nFeYLOmjNiYnintL7RyiPvHRCIlXzzp9ggkUCnE_NcZG4Vdra9yzblUWZTkh-4pdEErtEgxgduEu_WrXT3o4JJuE7KzAZeg_M3_XbpN89a9jFv0k"/>
+<div class="absolute bottom-3 right-3 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-on-surface">20-30 min</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-bold text-lg truncate">Sakura Zen Garden</h3>
+<div class="flex items-center gap-1 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Traditional Japanese • $$</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">Free delivery over $35</span>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                                View Menu <span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Regular Card 3 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_12px_24px_rgba(78,33,32,0.06)] group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Interior of a modern high-end sushi bar with ambient orange lighting and a professional chef preparing nigiri" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmWXLpQASKpe-JMSBpvjRNWJh-J1gJ_2jDH7ORZ2neGLayAb63xNW6jFhKzqj4ejIVp_i-XbwpOTCdG47HAVhYhhExeY-q5E8ZjgyfsTY5hMM0VTwXOOdFQjIHrkiv3tClmoleadm6KjqAscMiEn6ynz1pUOM4JrEXUYDPeQ3ZF2_YtPfJdQxr8N5CpNgf90ABz_yrKkSsf56kZuFVPmP23kWp1NBgAS5_KC5rZ2Jm-9p08xhHHNCQz_XwuQRiKWedANo-b6Kzou8"/>
+<div class="absolute top-3 right-3 bg-error text-on-error px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Fastest</div>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-bold text-lg truncate">Neon Tokyo Rolls</h3>
+<div class="flex items-center gap-1 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.2</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Modern Rolls • $</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">$2.99 Delivery Fee</span>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                                View Menu <span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Regular Card 4 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_12px_24px_rgba(78,33,32,0.06)] group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close up of steaming pork ramen bowl with a soft boiled egg, bamboo shoots, and green onions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Pts4RWUjPH-GthLNHpwWDI4wdNYYmQLbflZwLxMA8EXHC_jI61UK9dL9d_w_LMZIJ_8PGM4UJFe5J0rTLrXfuQ7aU0_yaX-h8Wgm9_e9FxzscP1tXpXG2iRO0mSOK4_tjdDhnOlsZomLuBp5qctwEZw3ahHD_7e9M5LvUobE55v09oGItme9Rckc_EcEBDN3zmr3kqoFKCSOHjsJ-0ls1l59ouVlwKzb0jN1NTZBDvB9PeHMi6vwvz6qS_DZgPuFV9tHiOyH6Lc"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-bold text-lg truncate">Kobe Ramen &amp; Sushi</h3>
+<div class="flex items-center gap-1 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.5</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Ramen • Sushi • Japanese • $$</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">15-25 min</span>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                                View Menu <span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Regular Card 5 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_12px_24px_rgba(78,33,32,0.06)] group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of fresh salmon sashimi pieces arranged neatly with wasabi and ginger on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFYig96tuTpNeQTvS2_OR05-jMhKgy4ph6xkPlskeZGMLvaR5uvH9c0oO_NacxBPsqOHxmJ8m3pGjHZ1ignV_4RQtQ6U18K2Dl1lZ9-QoXGAWwEOjy8lwO0dr5ZckmVbivUoyNrJL03LpcYBgUP8Y41wnHPDTgjAmyBymlI0-pzoaYd4maklMhT7dWoPd2EwSIwcyEK-KDgUTOe4qJvdDi9_pbwVLo9OiKM6P8mHAu4rwCORnDyK7nGV7Yt1KIJFoLYbGXVnR5k6M"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-bold text-lg truncate">Ocean Fresh Nigiri</h3>
+<div class="flex items-center gap-1 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Sushi • Seafood • $$$</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">35-45 min</span>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                                View Menu <span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Regular Card 6 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_12px_24px_rgba(78,33,32,0.06)] group">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A large party platter of assorted sushi rolls, nigiri, and maki on a wooden boat display" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM-cffTznfa5Y5RsOxarRnIt8oeqO4YjGGKwKhjDyjv9tgqyWJ9cx6EZm_GCYkdpW5oRRG7uFDITV94nSVTqdXKK1pOIdDhnjYT94OifQcAvMpkCv32WyOS5DtR6oV845pPFAFQUv1gJx89YBpHt2QmO_p0xZZiEH79DNm7Xy4F2-1bIvNmzBnNUnK7dQFsUWtmDGAJs1qahqr7m6jTgSONhN2ggVyRC9iRqbYNS4MIpExGJFt8gNV5SQA_Ihr0ak2rShfldQsTTg"/>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center mb-1">
+<h3 class="font-bold text-lg truncate">The Sushi Boat</h3>
+<div class="flex items-center gap-1 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.1</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Japanese • Big Portions • $$</p>
+<div class="flex items-center justify-between">
+<span class="text-xs text-on-surface-variant font-medium">30-40 min</span>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                                View Menu <span class="material-symbols-outlined text-xs">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination-ish View More -->
+<div class="mt-16 flex justify-center">
+<button class="bg-surface-container-high text-on-surface px-12 py-4 rounded-full font-bold hover:bg-surface-container-highest transition-all flex items-center gap-3">
+                    Load More Flavors
+                    <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ffedeb] dark:bg-stone-900 w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-xl font-bold text-[#4e2120] block">Culinary Canvas</span>
+<p class="font-['Be_Vietnam_Pro'] text-sm tracking-wide text-[#4e2120]/60 max-w-xs">
+                    © 2024 Culinary Canvas. Crafted for the epicurean. Experience gastronomy at its finest.
+                </p>
+</div>
+<div class="space-y-4">
+<span class="font-bold text-sm uppercase tracking-widest text-on-surface">Experience</span>
+<ul class="space-y-2">
+<li><a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/60 hover:text-[#FF5722] transition-all" href="#">About Us</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/60 hover:text-[#FF5722] transition-all" href="#">Chef Partners</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/60 hover:text-[#FF5722] transition-all" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="font-bold text-sm uppercase tracking-widest text-on-surface">Legal</span>
+<ul class="space-y-2">
+<li><a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/60 hover:text-[#FF5722] transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/60 hover:text-[#FF5722] transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<span class="font-bold text-sm uppercase tracking-widest text-on-surface">Stay Inspired</span>
+<div class="flex gap-2">
+<input class="bg-surface-container-lowest border-none rounded-full px-4 py-2 text-sm w-full focus:ring-1 ring-primary/20" placeholder="Your email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-full active:scale-90 transition-all">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">camera</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

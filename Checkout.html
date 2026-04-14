@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#fff4f3",
+                    "on-error-container": "#570008",
+                    "primary-dim": "#8d3100",
+                    "on-secondary-fixed-variant": "#12661e",
+                    "on-secondary-fixed": "#00460e",
+                    "surface-container-highest": "#ffd2d0",
+                    "surface-variant": "#ffd2d0",
+                    "surface-dim": "#ffc7c4",
+                    "on-tertiary-container": "#523700",
+                    "background": "#fff4f3",
+                    "on-primary-container": "#431300",
+                    "error-dim": "#9f0519",
+                    "on-error": "#ffefee",
+                    "error": "#b31b25",
+                    "tertiary": "#7b5400",
+                    "surface-container-low": "#ffedeb",
+                    "tertiary-container": "#feb300",
+                    "primary-container": "#ff793e",
+                    "tertiary-fixed": "#feb300",
+                    "primary-fixed-dim": "#f56724",
+                    "inverse-surface": "#240304",
+                    "secondary": "#176a21",
+                    "surface-tint": "#a13900",
+                    "secondary-fixed": "#9df197",
+                    "tertiary-dim": "#6b4900",
+                    "inverse-primary": "#fc6c29",
+                    "primary": "#a13900",
+                    "surface-container-high": "#ffdad8",
+                    "tertiary-fixed-dim": "#eda600",
+                    "on-tertiary-fixed": "#382400",
+                    "secondary-fixed-dim": "#90e28a",
+                    "on-primary": "#ffefea",
+                    "inverse-on-surface": "#ce8c89",
+                    "on-secondary-container": "#005c15",
+                    "on-surface": "#4e2120",
+                    "secondary-container": "#9df197",
+                    "on-primary-fixed": "#000000",
+                    "outline": "#a26765",
+                    "on-surface-variant": "#834c4b",
+                    "error-container": "#fb5151",
+                    "on-tertiary-fixed-variant": "#5e4000",
+                    "on-primary-fixed-variant": "#521900",
+                    "primary-fixed": "#ff793e",
+                    "surface-bright": "#fff4f3",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#d1ffc8",
+                    "on-tertiary": "#fff1df",
+                    "secondary-dim": "#025d16",
+                    "surface-container": "#ffe1e0",
+                    "outline-variant": "#e09c99",
+                    "on-background": "#4e2120"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 244, 243, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation (Shell Implementation) -->
+<header class="fixed top-0 w-full z-50 bg-[#fff4f3]/80 backdrop-blur-2xl shadow-[0_4px_48px_rgba(78,33,32,0.04)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold tracking-tight text-[#4e2120] font-headline">Culinary Canvas</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] transition-all duration-300" href="#">Browse</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] transition-all duration-300" href="#">Offers</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] transition-all duration-300" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-white/50 text-[#4e2120]" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined p-2 rounded-full hover:bg-white/50 text-[#4e2120]" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-12 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<div class="mb-12">
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface tracking-tight mb-2">Review Your Order</h1>
+<p class="text-on-surface-variant font-medium">Finishing touches for your gourmet experience.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Checkout Details -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Delivery Section (Map & Address) -->
+<section class="bg-surface-container-low rounded-lg overflow-hidden">
+<div class="h-48 w-full relative">
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-[0.9]" data-alt="stylized architectural map view of a metropolitan residential area with soft coral and cream tones and clean navigation markers" data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-xA1Y1vJoIxKdYHhPbEvrhj8dI0uf4ID9xqifW8u4NwUm_P5uSXdqGII6bYQXxUrgRY2rQTpD1q_YHm7OJKhRR5Pghs2YYFXjew72y0RV0CbffPfy5oJU6gMTwJBlYUXhQQR1073DIxThbPn75gl4w2uHCfgqsyd54_b5TMpUs2ueO0kmFtiRd-xObEtj3K1vvWD6Y278ZN_1Z9fuOyDP2Jo2v0iEkxHdLKR-uVPDMEPdRXXanWQInssjTWCmTdmiezYsYaapE4Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-6 bg-surface-container-lowest px-4 py-2 rounded-full shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-xs font-bold tracking-wide uppercase text-on-surface-variant">Estimated: 25-35 mins</span>
+</div>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h2 class="text-xl font-headline font-bold text-on-surface">Delivery Address</h2>
+<button class="text-primary font-bold text-sm hover:underline underline-offset-4">Change</button>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-surface-container-highest p-3 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="home">home</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Home Sanctuary</p>
+<p class="text-on-surface-variant leading-relaxed">248 Culinary Lane, Suite 402<br/>West Vineyard, CA 94103</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-surface-container-low p-8 rounded-lg">
+<div class="flex justify-between items-start mb-6">
+<h2 class="text-xl font-headline font-bold text-on-surface">Payment Method</h2>
+<button class="text-primary font-bold text-sm hover:underline underline-offset-4">Manage</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-md border border-outline-variant/15 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-8 bg-on-surface/5 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="credit_card">credit_card</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">•••• •••• •••• 8842</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest font-semibold">Expires 12/26</p>
+</div>
+</div>
+<div class="material-symbols-outlined text-secondary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-5 sticky top-28">
+<div class="bg-surface-container-highest/30 rounded-lg p-8 ring-1 ring-inset ring-outline-variant/10">
+<h2 class="text-2xl font-headline font-bold text-on-surface mb-8">Summary</h2>
+<!-- Order Items -->
+<div class="space-y-6 mb-8">
+<div class="flex gap-4 items-center">
+<div class="h-16 w-16 rounded-md overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="macro close-up of a premium double wagyu beef burger with melting cheese and artisan brioche bun on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGb-5gTGtNsG6h1BTvJe-Jk6xsb2rRzFo4ke74AG84adjV-GocOSFzkPztRr5UvEQ4qh5lm4AS1rsZ8HiwcFuAAUJoZX_fhe6hZJzuI0qouXcn6xVALyjzbgj6ucgJkO3xjhAW81Ua6-YM6Nbm7Dh49TFob8t5yTtX-0eInzFtnf4A1e8b8ga1KQE3M1wzbSpGOlkI3yLeszVSl45p10zXsYgwQtIr3Y795PDL9geInA63I2hFpfAVzDRpQb98cBuPS8e3XjPs1vo"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-on-surface">Classic Burger</p>
+<p class="font-bold text-on-surface">$25.80</p>
+</div>
+<p class="text-sm text-on-surface-variant">2 × $12.90</p>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="h-16 w-16 rounded-md overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="crispy golden french fries dusted with sea salt and herbs served in a rustic paper cone with warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYjMrMtq_WSzYJ2XyT12YqE6rChZoc-JHI3cz3czBwZ3CDM61KFtowdm6rDyR62hMVkpyJmfSfULC8P9e1G31WZfXpl9o14bxZTL9xEmYB0ZOb0bg-hrAMbzveCFgfMEnMVi-8gZpYWMO05moHQE5Vou7gS0ynqOUAuc20y231jsbZF2ZkZuycOyqexW98M1VKknr1PMTIR5sftVmCj6JxzrOXk7eSg11lanCEceEXQAybM5vXdopsg05qpWfEQWzvU-flpehiRU"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-center">
+<p class="font-bold text-on-surface">Large Fries</p>
+<p class="font-bold text-on-surface">$6.50</p>
+</div>
+<p class="text-sm text-on-surface-variant">1 × $6.50</p>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-4 pt-6 border-t border-outline-variant/20">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span>$32.30</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Delivery Fee</span>
+<span>$4.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Tax &amp; Fees</span>
+<span>$2.45</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="text-xl font-headline font-bold text-on-surface">Total</span>
+<span class="text-2xl font-headline font-extrabold text-primary">$38.75</span>
+</div>
+</div>
+<!-- CTA -->
+<button class="w-full mt-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold rounded-full text-lg shadow-[0_12px_24px_rgba(161,57,0,0.2)] active:scale-95 transition-all duration-200">
+                        Place Order • $38.75
+                    </button>
+<p class="text-center mt-6 text-xs text-on-surface-variant/70 px-4 leading-relaxed">
+                        By placing your order, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell Implementation -->
+<footer class="bg-[#ffedeb] mt-24 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 max-w-7xl mx-auto">
+<div class="lg:col-span-1">
+<div class="text-xl font-bold text-[#4e2120] font-headline mb-4">Culinary Canvas</div>
+<p class="text-[#4e2120]/60 text-sm leading-relaxed">Crafting bespoke culinary journeys from the finest local kitchens to your door.</p>
+</div>
+<div>
+<h4 class="font-bold text-[#4e2120] mb-4">Company</h4>
+<ul class="space-y-2">
+<li><a class="text-[#4e2120]/60 text-sm hover:text-[#FF5722] transition-all" href="#">About Us</a></li>
+<li><a class="text-[#4e2120]/60 text-sm hover:text-[#FF5722] transition-all" href="#">Sustainability</a></li>
+<li><a class="text-[#4e2120]/60 text-sm hover:text-[#FF5722] transition-all" href="#">Chef Partners</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#4e2120] mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-[#4e2120]/60 text-sm hover:text-[#FF5722] transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-[#4e2120]/60 text-sm hover:text-[#FF5722] transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-[#4e2120] mb-4">Newsletter</h4>
+<div class="flex bg-surface rounded-full p-1 border border-outline-variant/10">
+<input class="bg-transparent border-none focus:ring-0 text-sm px-4 flex-grow" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-full text-sm font-bold">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-12 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-[#4e2120]/60 text-sm font-label tracking-wide">© 2024 Culinary Canvas. Crafted for the epicurean.</p>
+</div>
+</footer>
+</body></html>

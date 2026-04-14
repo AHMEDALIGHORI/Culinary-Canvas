@@ -1,0 +1,5 @@
+/* Tailwind is configured via CDN in index.html for precise alignment with Stitch output */
+body {
+  margin: 0;
+  padding: 0;
+}

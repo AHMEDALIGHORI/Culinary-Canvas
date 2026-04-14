@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Promotions &amp; Offers - Culinary Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#b31b25",
+                        "secondary": "#176a21",
+                        "background": "#fff4f3",
+                        "tertiary-dim": "#6b4900",
+                        "primary-fixed-dim": "#f56724",
+                        "on-primary": "#ffefea",
+                        "tertiary-container": "#feb300",
+                        "tertiary-fixed": "#feb300",
+                        "on-tertiary-fixed": "#382400",
+                        "on-tertiary-container": "#523700",
+                        "surface-container-highest": "#ffd2d0",
+                        "on-surface-variant": "#834c4b",
+                        "inverse-primary": "#fc6c29",
+                        "surface-container": "#ffe1e0",
+                        "on-primary-container": "#431300",
+                        "secondary-dim": "#025d16",
+                        "on-tertiary-fixed-variant": "#5e4000",
+                        "tertiary-fixed-dim": "#eda600",
+                        "outline-variant": "#e09c99",
+                        "error-container": "#fb5151",
+                        "on-background": "#4e2120",
+                        "on-secondary": "#d1ffc8",
+                        "inverse-on-surface": "#ce8c89",
+                        "secondary-fixed-dim": "#90e28a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-dim": "#8d3100",
+                        "on-secondary-fixed": "#00460e",
+                        "surface-tint": "#a13900",
+                        "primary-container": "#ff793e",
+                        "error-dim": "#9f0519",
+                        "on-error": "#ffefee",
+                        "on-surface": "#4e2120",
+                        "tertiary": "#7b5400",
+                        "on-secondary-container": "#005c15",
+                        "secondary-container": "#9df197",
+                        "inverse-surface": "#240304",
+                        "surface-variant": "#ffd2d0",
+                        "primary": "#a13900",
+                        "surface-dim": "#ffc7c4",
+                        "on-tertiary": "#fff1df",
+                        "secondary-fixed": "#9df197",
+                        "on-secondary-fixed-variant": "#12661e",
+                        "outline": "#a26765",
+                        "surface-container-high": "#ffdad8",
+                        "on-primary-fixed-variant": "#521900",
+                        "primary-fixed": "#ff793e",
+                        "on-error-container": "#570008",
+                        "on-primary-fixed": "#000000",
+                        "surface": "#fff4f3",
+                        "surface-container-low": "#ffedeb",
+                        "surface-bright": "#fff4f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff4f3]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_48px_48px_rgba(78,33,32,0.04)]">
+<nav class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-[#a13900] dark:text-[#ff793e] tracking-tight">Culinary Canvas</div>
+<div class="hidden md:flex items-center space-x-8 font-['Plus_Jakarta_Sans'] font-bold text-base">
+<a class="text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors hover:bg-[#ffedeb] dark:hover:bg-stone-800 p-2 rounded-lg" href="#">Explore</a>
+<a class="text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors hover:bg-[#ffedeb] dark:hover:bg-stone-800 p-2 rounded-lg" href="#">Favorites</a>
+<a class="text-[#a13900] dark:text-[#ff793e] border-b-2 border-[#a13900] pb-1" href="#">Promotions</a>
+<a class="text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors hover:bg-[#ffedeb] dark:hover:bg-stone-800 p-2 rounded-lg" href="#">Orders</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-[#a13900] dark:text-[#ff793e] active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-[#a13900] dark:text-[#ff793e] active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-28 pb-20 px-4 md:px-8 max-w-screen-2xl mx-auto">
+<!-- Hero: Loyalty & Main Offer -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<div class="lg:col-span-2 relative overflow-hidden rounded-lg bg-primary-container text-on-primary-container p-8 md:p-12 flex flex-col justify-center min-h-[400px]">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover mix-blend-overlay opacity-30" data-alt="high-end editorial food photography of various artisan dishes on a warm textured table background with soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSUQX_F7sLgKNZESsKLbXGs3FKFTwBQ87yiqhBK9-7lu8ZDEWeVxe8uOuHde1L95mjZDwpn643Kw1xwPEl79PIES_gFZBjZvim6_eNjEpU5BKVokvwf-a7pOK-vEfFmX00UrnpmLXO2hOH4WlhUfp3k5eT4D9Ow3f_vKvf6GRSDAoMkAEbfNMG0LhsMXTtqRM5r9JAfZbH2f7uT-udErF375IDZ5YG21gBDCZvJGVa7v80qohHpNctSdlnm-Wnv01MzseOTwhP9WQ"/>
+</div>
+<div class="relative z-10 space-y-6">
+<span class="inline-block px-4 py-1 bg-on-primary-container text-primary-container rounded-full text-sm font-bold uppercase tracking-wider">Welcome Offer</span>
+<h1 class="text-4xl md:text-6xl font-black leading-tight max-w-xl">20% off your first order</h1>
+<p class="text-lg md:text-xl font-medium max-w-md opacity-90">Start your culinary journey with a taste of excellence. Valid on all restaurants this week.</p>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg shadow-lg active:scale-95 transition-transform">Claim Offer Now</button>
+</div>
+</div>
+<!-- Loyalty Status -->
+<div class="bg-surface-container-low rounded-lg p-8 flex flex-col justify-between border-2 border-primary/10">
+<div>
+<div class="flex justify-between items-start mb-6">
+<div class="w-16 h-16 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">stars</span>
+</div>
+<span class="text-xs font-bold text-tertiary uppercase tracking-widest">Gold Member</span>
+</div>
+<h2 class="text-2xl font-bold mb-2">Epicurean Rewards</h2>
+<p class="text-on-surface-variant text-sm mb-8">You're 250 points away from your next $10 credit.</p>
+<div class="space-y-4">
+<div class="flex justify-between text-sm font-bold">
+<span>Points Progress</span>
+<span>750 / 1000</span>
+</div>
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-3/4 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/30">
+<a class="flex items-center justify-between group" href="#">
+<span class="font-bold text-primary">View Loyalty Benefits</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Category: New User Specials -->
+<section class="mb-16">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-3xl font-black text-on-surface mb-2">New User Specials</h2>
+<p class="text-on-surface-variant">Exclusive curated deals to get you started</p>
+</div>
+<button class="text-primary font-bold hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- BOGO Card -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 shadow-[0_48px_48px_rgba(78,33,32,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 mb-4 rounded-md overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of a fresh artisanal pizza with melting mozzarella and basil leaves on a rustic board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpO4B_IFaMA0SlgoAzUYH5vze4nlJMeOpB4i2Dfz-2YLuPHfWrzk7JmOFLHbAlX9hTvOMqcEH2j8XBKbnIUlEOwfRJzr8L5opYlyR2nIN1sWedYoWsLcLg-WC0j659QMIP-AH8q3UzNIffTSZOuZ8PtMHPYtK_3TYhmPUgmKZU0Tt1KtgEwz9ay5fZ68qIZtzNdqV71O5ld2h-Kp6T9NmSWFRI6Sf55mDA0m-N5bXiZOX7Kc498TrCYznZ-e_DgeWNNLb09ysRpeM"/>
+<div class="absolute top-3 left-3 bg-secondary text-on-secondary text-xs font-bold px-3 py-1 rounded-full uppercase">BOGO</div>
+</div>
+<h3 class="text-lg font-bold mb-1">Artisan Pizzeria</h3>
+<p class="text-sm text-on-surface-variant mb-4">Buy one signature pizza, get a classic margherita free.</p>
+<div class="flex items-center justify-between">
+<span class="text-secondary font-bold">$18.00+</span>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- 50% Off Card -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 shadow-[0_48px_48px_rgba(78,33,32,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 mb-4 rounded-md overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="vibrant healthy grain bowl with avocado, edamame, and radish on a light marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoUlxT6etVFpPCN60FNA90P0NERGasQCtq5XhjRuSy9LZ67HmtYFZ8Bg3DV7X12UkU57KTau39EWBWI_jcAuuQFugb1TBm6dcsWUehyMiJcws28tviJ3yehy1fpW8zodTGJXUigvC8hBnpOfkwSxFIXGAq68BGpbFtMLVNBqazcUIMRxv48YqF0NbpSbdx90GLTS4ZmzqMPPMMlQMcpBD2rlR-J13BJOOKFNLtYtLUtWEKJ1iv3TYHX1DkWcIdtchnijy7Om5bFR4"/>
+<div class="absolute top-3 left-3 bg-primary text-on-primary text-xs font-bold px-3 py-1 rounded-full uppercase">50% OFF</div>
+</div>
+<h3 class="text-lg font-bold mb-1">The Green Kitchen</h3>
+<p class="text-sm text-on-surface-variant mb-4">Half price on all seasonal salad bowls for new explorers.</p>
+<div class="flex items-center justify-between">
+<span class="text-secondary font-bold">$9.50</span>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Free Delivery -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 shadow-[0_48px_48px_rgba(78,33,32,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 mb-4 rounded-md overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury sushi platter with gold leaf accents on a black slate tray, dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsCy45miMvhZs4ABM_erf6cpOxnKGA8FAoHuhiDKgFQIJc8c62wBJRNQQ92wf_MkMg0pRd203iDEXQBffNKakTtAmxahQcrO5JkxgqMRPG2oR18AmhX1yZKVkiTN-iDh3MSwtaezVXZtXfllt9apmuCct3mNThik5JTYbkjht96xVFIOxqmoq3uNusCca1_axZbr8R2qlonAEyWjmO3XRgpzRa2bc-1tzXdlE0jhJIIkgqPWFsppJSqpP7q0rods0EX0ZdV4KwDJU"/>
+<div class="absolute top-3 left-3 bg-tertiary text-on-tertiary text-xs font-bold px-3 py-1 rounded-full uppercase">FREE DELIVERY</div>
+</div>
+<h3 class="text-lg font-bold mb-1">Mizu Sushi House</h3>
+<p class="text-sm text-on-surface-variant mb-4">No delivery fees on orders over $40 today only.</p>
+<div class="flex items-center justify-between">
+<span class="text-secondary font-bold">$40.00+</span>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Dessert Special -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 shadow-[0_48px_48px_rgba(78,33,32,0.04)] hover:shadow-xl transition-all duration-300">
+<div class="relative h-48 mb-4 rounded-md overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="elegant chocolate fondant with a molten center and fresh berries on a white designer plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBvfTZTxMN4HGo0D7pR4xfe7yg5emg9LNMEdch3MZhSKaQDGEmRDHk0osit5kYc7apizXVk840BclfjGqjOF_PEj4FYaCGrVAZpfD8p8NofSWCDWWkyMHSTPTS4CTPNWKGaic1d8Pu3PaPt_6ns7AIwRQC7IYQbrk3Dt9YHaa2hX9FZ0oeB3NsW9EXfipNQM-ex6wMIp_hxC_mc7FgPDaJBq-pY3xUJPI4lcHJyNgrrNe0OPzLyIHzl1h6-4eRYoPmO_Flyd0eEpA"/>
+<div class="absolute top-3 left-3 bg-primary-fixed-dim text-on-primary text-xs font-bold px-3 py-1 rounded-full uppercase">CHEF'S GIFT</div>
+</div>
+<h3 class="text-lg font-bold mb-1">Velvet Confections</h3>
+<p class="text-sm text-on-surface-variant mb-4">Complimentary truffle with any main dessert order.</p>
+<div class="flex items-center justify-between">
+<span class="text-secondary font-bold">$12.00+</span>
+<button class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Nearby Deals (Bento Grid) -->
+<section class="mb-16">
+<h2 class="text-3xl font-black text-on-surface mb-8">Nearby Deals</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Featured Large -->
+<div class="md:col-span-8 relative rounded-lg overflow-hidden group bg-surface-container shadow-inner">
+<img alt="" class="w-full h-full object-cover absolute inset-0 z-0 group-hover:scale-105 transition-transform duration-700" data-alt="interior of a bustling gourmet restaurant with warm lighting and wooden accents, blurry people in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1vqpSFlUaprcZKywuOs4A7oOCZCVxjLnV9scmxbMDg625Z8BWARMyFDqaxZY8P5cDD1_cCpR-Woq2S12eD2v9JrtKNzNHisIjnhzbrN_gPgF_u1d0xmIQmyflGno9XMoDCVebZZI5jplLQNqWELkYYtDDRqB1oryif6Lac-oAAYrlrOoqQcq1YMqnTgyZ7f7YayHhbM8TfTf3VwG8x0RenO1tBC5viz7enFfcbMOcrLBYlw1Zx1jxpR6YrMYUxmkrYMG7uzhkL6c"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-8 md:p-12 z-20 text-white">
+<span class="bg-secondary px-4 py-1 rounded-full text-xs font-bold mb-4 inline-block">LOCAL FAVORITE</span>
+<h3 class="text-3xl md:text-5xl font-black mb-4">The Ember Grill</h3>
+<p class="text-lg opacity-90 max-w-lg mb-8 font-light">Join us for "Smoky Sundays" - All grilled platters are 25% off when you dine-in or order for pickup.</p>
+<button class="bg-white text-on-surface font-bold px-8 py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors">Book a Table</button>
+</div>
+</div>
+<!-- Sidebar Deal 1 -->
+<div class="md:col-span-4 bg-[#ffedeb] rounded-lg p-6 flex flex-col justify-between group">
+<div class="space-y-4">
+<div class="w-full h-40 rounded-md overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="hot artisan coffee pouring into a ceramic cup with soft morning light and steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrnLkX8ObrS0LtxHw0-pRWa3A8CbDa15WaiTjKMdYrEt-naXaTPYdGDrdj3_fpkFVgsDZAJkugOkB7rf8SieF5OU2yAcloeQVwcAEn5ExBcAx5Wp1QVjgm-EHx25d_STOVmJJFZQcrNwaQUEjpz_J2bsxcbeb787poVOpmaiq9o21OIOIfk0j0hhZOJAblvkrFNh53VPqh2jw3fBL6a2LzqB4DNdXTpYzb4Jx86tc0BKOb6opKVLC4L5-RpDyb8OAozksw3mYht_U"/>
+</div>
+<h4 class="text-xl font-bold">Morning Perk</h4>
+<p class="text-on-surface-variant text-sm">Buy 5 coffees, get the 6th free at any "Bean &amp; Brew" location near you.</p>
+</div>
+<div class="pt-6">
+<span class="text-primary font-black text-2xl">FREE COFFEE</span>
+</div>
+</div>
+<!-- Sidebar Deal 2 -->
+<div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container rounded-lg p-6 flex flex-col justify-between group">
+<div class="flex items-center space-x-3 mb-4">
+<span class="material-symbols-outlined text-3xl">timer</span>
+<span class="font-bold uppercase tracking-tighter text-sm">Flash Deal - Ends in 2h</span>
+</div>
+<h4 class="text-xl font-black mb-2">Street Food Festival</h4>
+<p class="text-sm opacity-90 mb-4">Flat $5 off on all street food orders over $15. Limited to first 500 orders.</p>
+<button class="w-full bg-on-tertiary-container text-tertiary-container py-3 rounded-full font-bold">Grab It Now</button>
+</div>
+<!-- Sidebar Deal 3 (Wide span on small) -->
+<div class="md:col-span-8 bg-surface-container-highest rounded-lg p-8 flex items-center justify-between border-2 border-dashed border-primary/20">
+<div class="flex-1">
+<h4 class="text-2xl font-black text-primary mb-2">Invite your friends!</h4>
+<p class="text-on-surface-variant">They get $10 off, and you get $10 off. It's a win-win dinner party.</p>
+</div>
+<div class="ml-6">
+<div class="bg-white p-4 rounded-lg border border-outline-variant shadow-sm text-center">
+<code class="text-xl font-black text-on-surface tracking-widest">SAVOR10</code>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant mt-2">Copy Code</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ffedeb] dark:bg-stone-900 w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-screen-2xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-bold text-[#4e2120] dark:text-stone-200">Culinary Canvas</div>
+<p class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/70 dark:text-stone-400">© 2024 Culinary Canvas. Crafted for the epicurean.</p>
+</div>
+<div class="flex flex-wrap gap-6 md:justify-end">
+<a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">About Us</a>
+<a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Chef Partners</a>
+<a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-['Be_Vietnam_Pro'] text-sm text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/80 backdrop-blur-xl border-t border-outline-variant/10 z-50 px-6 py-3 flex justify-between items-center">
+<button class="flex flex-col items-center text-[#4e2120]/70">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center text-[#4e2120]/70">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold">Favorites</span>
+</button>
+<button class="flex flex-col items-center text-[#a13900]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sell</span>
+<span class="text-[10px] font-bold">Deals</span>
+</button>
+<button class="flex flex-col items-center text-[#4e2120]/70">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-bold">Orders</span>
+</button>
+</div>
+</body></html>

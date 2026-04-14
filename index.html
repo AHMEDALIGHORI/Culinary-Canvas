@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>Culinary Canvas - Food Web App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff4f3",
+                        "on-error-container": "#570008",
+                        "primary-dim": "#8d3100",
+                        "on-secondary-fixed-variant": "#12661e",
+                        "on-secondary-fixed": "#00460e",
+                        "surface-container-highest": "#ffd2d0",
+                        "surface-variant": "#ffd2d0",
+                        "surface-dim": "#ffc7c4",
+                        "on-tertiary-container": "#523700",
+                        "background": "#fff4f3",
+                        "on-primary-container": "#431300",
+                        "error-dim": "#9f0519",
+                        "on-error": "#ffefee",
+                        "error": "#b31b25",
+                        "tertiary": "#7b5400",
+                        "surface-container-low": "#ffedeb",
+                        "tertiary-container": "#feb300",
+                        "primary-container": "#ff793e",
+                        "tertiary-fixed": "#feb300",
+                        "primary-fixed-dim": "#f56724",
+                        "inverse-surface": "#240304",
+                        "secondary": "#176a21",
+                        "surface-tint": "#a13900",
+                        "secondary-fixed": "#9df197",
+                        "tertiary-dim": "#6b4900",
+                        "inverse-primary": "#fc6c29",
+                        "primary": "#a13900",
+                        "surface-container-high": "#ffdad8",
+                        "tertiary-fixed-dim": "#eda600",
+                        "on-tertiary-fixed": "#382400",
+                        "secondary-fixed-dim": "#90e28a",
+                        "on-primary": "#ffefea",
+                        "inverse-on-surface": "#ce8c89",
+                        "on-secondary-container": "#005c15",
+                        "on-surface": "#4e2120",
+                        "secondary-container": "#9df197",
+                        "on-primary-fixed": "#000000",
+                        "outline": "#a26765",
+                        "on-surface-variant": "#834c4b",
+                        "error-container": "#fb5151",
+                        "on-tertiary-fixed-variant": "#5e4000",
+                        "on-primary-fixed-variant": "#521900",
+                        "primary-fixed": "#ff793e",
+                        "surface-bright": "#fff4f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#d1ffc8",
+                        "on-tertiary": "#fff1df",
+                        "secondary-dim": "#025d16",
+                        "surface-container": "#ffe1e0",
+                        "outline-variant": "#e09c99",
+                        "on-background": "#4e2120"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

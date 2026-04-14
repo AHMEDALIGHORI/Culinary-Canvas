@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff4f3",
+                        "on-error-container": "#570008",
+                        "primary-dim": "#8d3100",
+                        "on-secondary-fixed-variant": "#12661e",
+                        "on-secondary-fixed": "#00460e",
+                        "surface-container-highest": "#ffd2d0",
+                        "surface-variant": "#ffd2d0",
+                        "surface-dim": "#ffc7c4",
+                        "on-tertiary-container": "#523700",
+                        "background": "#fff4f3",
+                        "on-primary-container": "#431300",
+                        "error-dim": "#9f0519",
+                        "on-error": "#ffefee",
+                        "error": "#b31b25",
+                        "tertiary": "#7b5400",
+                        "surface-container-low": "#ffedeb",
+                        "tertiary-container": "#feb300",
+                        "primary-container": "#ff793e",
+                        "tertiary-fixed": "#feb300",
+                        "primary-fixed-dim": "#f56724",
+                        "inverse-surface": "#240304",
+                        "secondary": "#176a21",
+                        "surface-tint": "#a13900",
+                        "secondary-fixed": "#9df197",
+                        "tertiary-dim": "#6b4900",
+                        "inverse-primary": "#fc6c29",
+                        "primary": "#a13900",
+                        "surface-container-high": "#ffdad8",
+                        "tertiary-fixed-dim": "#eda600",
+                        "on-tertiary-fixed": "#382400",
+                        "secondary-fixed-dim": "#90e28a",
+                        "on-primary": "#ffefea",
+                        "inverse-on-surface": "#ce8c89",
+                        "on-secondary-container": "#005c15",
+                        "on-surface": "#4e2120",
+                        "secondary-container": "#9df197",
+                        "on-primary-fixed": "#000000",
+                        "outline": "#a26765",
+                        "on-surface-variant": "#834c4b",
+                        "error-container": "#fb5151",
+                        "on-tertiary-fixed-variant": "#5e4000",
+                        "on-primary-fixed-variant": "#521900",
+                        "primary-fixed": "#ff793e",
+                        "surface-bright": "#fff4f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#d1ffc8",
+                        "on-tertiary": "#fff1df",
+                        "secondary-dim": "#025d16",
+                        "surface-container": "#ffe1e0",
+                        "outline-variant": "#e09c99",
+                        "on-background": "#4e2120"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fff4f3]/80 backdrop-blur-2xl shadow-[0_4px_48px_rgba(78,33,32,0.04)]">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-extrabold tracking-tight text-[#4e2120]">Culinary Canvas</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-[#FF5722] font-bold border-b-2 border-[#FF5722] pb-1 font-['Plus_Jakarta_Sans']" href="#">Browse</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] hover:bg-white/50 transition-all duration-300 px-3 py-1 rounded-full font-['Plus_Jakarta_Sans']" href="#">Offers</a>
+<a class="text-[#4e2120]/70 font-medium hover:text-[#FF5722] hover:bg-white/50 transition-all duration-300 px-3 py-1 rounded-full font-['Plus_Jakarta_Sans']" href="#">Orders</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold active:scale-95 duration-200 transition-all">
+                    Sign In
+                </button>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-white/50 text-[#4e2120] active:scale-95 duration-200">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 rounded-full hover:bg-white/50 text-[#4e2120] active:scale-95 duration-200">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="relative px-8 max-w-7xl mx-auto mb-16 overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="z-10">
+<h1 class="text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] mb-6 tracking-tight">
+                        Artisanal flavor,<br/>delivered to <span class="text-primary italic">your canvas.</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-10 max-w-lg">Experience curated dining from the city's finest chefs, brought straight to your doorstep with meticulous care.</p>
+<div class="relative max-w-xl group">
+<div class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-primary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full py-6 pl-14 pr-32 bg-surface-container-lowest rounded-full border-none shadow-[0_8px_32px_rgba(78,33,32,0.06)] focus:ring-4 focus:ring-primary/20 transition-all text-lg placeholder:text-on-surface-variant/50" placeholder="Find your favorite meal" type="text"/>
+<button class="absolute right-3 top-3 bottom-3 px-8 rounded-full bg-primary text-on-primary font-bold hover:bg-primary-dim transition-colors active:scale-95">
+                            Search
+                        </button>
+</div>
+</div>
+<div class="relative lg:h-[600px] flex items-center justify-center">
+<!-- Asymmetric Image Layout -->
+<div class="relative w-full h-full">
+<div class="absolute top-0 right-0 w-4/5 h-4/5 rounded-lg overflow-hidden rotate-3 shadow-2xl z-0">
+<img class="w-full h-full object-cover" data-alt="top-down artistic arrangement of gourmet Mediterranean dishes with vibrant vegetables and roasted meats on a rustic table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnVEh2BsQQX__hSrEvhR2v0LylFwQ1LJQ3bOsTQW4p6fFMOo8fjVp6w7MiblHGXOzfpxCOr4WrNhIeWWDOHMwNR4TDu8smFKVb-NQVCLt6eJMIFwI-N6yEJ43Lt9TxgVKyzDodVAckRQik-vfSObMpMnMrKPqT88WIuoC2XJ8jQcNvS6pZSxVUmH8ERl-Rkmqd0P_RSNcHy8Es_jc8jwshHLoIdP0bu2DJ58GvbnhZ4ykctHAcG-_ftBnSLH2AWC_mPa6igL9Fkuc"/>
+</div>
+<div class="absolute bottom-10 left-0 w-3/5 h-3/5 rounded-lg overflow-hidden -rotate-6 shadow-2xl z-10 border-[12px] border-surface">
+<img class="w-full h-full object-cover" data-alt="close-up of a fresh wood-fired pizza with melting mozzarella, vibrant basil leaves, and artisanal tomato sauce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASd8N6NkemHZXV0Whaz7gE6Hu3aGRPonVVoSN18elb6U8gUAYqVnrv7uNckuFia9HduFsfi58NzJ-qIiggD8CUdRMdc_7JPQuO8YtILz8nALzXc9WVtpKyTQ6ck9Fnu0qKLCpp7R7VUWS_7xCb-q6kUh3wn5Njfl-6CR5tfhwCZqmuCt6Asp1RwxHGUeqAl31Si4usiT7jvqHidVSW56h9CHEf4oyRcpQSc9-vjFzBNyOIbIYWjFu4TpjfzSgb6ThrggzdUblo6G0"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="mb-20">
+<div class="px-8 max-w-7xl mx-auto mb-8 flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-bold tracking-tight mb-2">Curated Categories</h2>
+<p class="text-on-surface-variant">Explore by your current craving</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    View all <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="flex overflow-x-auto no-scrollbar gap-6 px-8 max-w-7xl mx-auto pb-4">
+<!-- Pizza -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="vibrant slice of pepperoni pizza on a wooden surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjf8c5jJNQ92Yr6Ord1YuLr_5FYnCH3ds0E-A9alhPe3sNI0hukziyvv2XID3U225HgUztSfBT9xREwDQFMwDB5OpN26itDrfQD9vSrEwvDRqWDUK4Ud-0MVy-OIQvl9mR4O4fix9hAhEIoO-UlSEK_NIkB9p4Wk6i15altJP61U1ishgxYc-u0_S8HLZDIZr9PhGgKAkU_EmHjtJvwBuinN8pU4uSJo9PihFqXQaMDGrPdNnUnmzD1aI3Y2SNcYJw-JJyGXXecCk"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Pizza</p>
+</div>
+<!-- Sushi -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="fresh salmon nigiri sushi with a touch of wasabi and ginger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV_Fw1xEp9I2xAJjWR__-Fk6fRmg7wherK7IEW3oNNhDdw68LQSE9BO9Llt0e9OsSpiJV7FAqt7uFbwH6MAHJDdc5cw9VcZXcr9Kw4H087ulfrX1eFbqASiqqrZPBL7eRNgan0FCvudAqSy0jMR5iH-DlxqA0SNU_Kvd4j_Ueek2DIMwmJepp95V6WyLZkJXw0uHVwSfScaWNS1uFOt6Zdi-JlWzLtP_xMXIJZqEzWHWAWAGv1xoqFMnNrvuMq9d1UpxD4cfZjR8M"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Sushi</p>
+</div>
+<!-- Burgers -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="stack of juicy smash burgers with melting cheese and fresh lettuce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHZOqrZ0nqOwo2Qtmh3roH8efnKrIsC0IjB-2GonMt-sDsWNPRP9P_cm7iHvT2fj_sGAQv2YRHLawsc4oZrtGFDKVM3k2o2BOsqqqf-7HXHIZAWVgYOkiPukEOXyTVgxIngwJByEpDFg0bSZ8HAKZFLAVjXrXbWa6SlUiWXYd6QoO09U0ff1oHBmNa2xSGm7f2OX8_HQXWFFspEgjA6sZbEE1STurGYZNcJIoFmNgSKzoLEa6ALprj9QR88bLyjhjqYayYzOnjHfo"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Burgers</p>
+</div>
+<!-- Healthy -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="vibrant buddha bowl with avocado, quinoa, and colorful fresh vegetables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIXwAays26gLNvbdXsPRvm93Oq0inDY8jtYd38Q2O4808UKE-oTJ2UEPXSOtq58ig7-eQXKgbi0wlLMIwjIRmgSgyv1Mq1EX4xtKlbRxTQYcEa3TUzBd2BtIMoyLAPYGNm1TeMXkvFRnFBKi5oeI52CWir6GxhX__3-YPIZ4l31SoBOeO0eytKQw6OKAEuRfW_i7JJXbwB3QvPcz1-VtaYImfzNVfRmi4ph-GLTUkez-plHtifkLVkBqWzCN4HTYFAlHZX9DJZplM"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Healthy</p>
+</div>
+<!-- Desserts -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="decadent chocolate lava cake with a molten center and dusting of sugar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0t_0tvDgecu-S6UxqTDMkZQu2Lm-hb3ggsj3lW-UMwqsB6ayzA5slqsLw25PnVsC4ulv21nekmSY-5DtC7ExaPpTvGnBQ_LoNoZIUMjRt_QSNMOh0QVfZHqd0vMiOv2xy2IDwU5If0Lxo8-HR9Raxe2-KTA11fG6ZDAIqrcj1oL6MZLaak3xdPMq9b_CBIV9VgQGzzRnP_NkzA50E0z0oFJ4xg9FXwtOEjWK4XqWETuIKSR47x7bCptiXksB3X1VhsjteetATPLY"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Desserts</p>
+</div>
+<!-- Tacos -->
+<div class="flex-shrink-0 group cursor-pointer">
+<div class="w-32 h-32 rounded-full bg-surface-container-low flex flex-col items-center justify-center gap-3 group-hover:bg-primary-container transition-all duration-300">
+<div class="w-16 h-16 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="authentic street tacos with cilantro, onions, and fresh lime wedges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9NZKJ222qMwt3H_hF4QwBGkabbRDOf0pPN6oATcZWVYYguHmrrpXA0djxwLO2_a9KwyYVJHP3QFO3aI8Ysv0SjAddYcvzdcoLE4P7YHKHjfzgZk44ig0Q0klxa60sw5z1KdIvWOE5HHUZ7Ti5pk-uI5NumSJcU-ZgOPgfLJMFVTUWHQ7XnZ8Hrq6tL3wnSHDmx1Uiwp26JzT9DuOZ37J0WugsnuiJFFFEj1RxW0oxC6PRsW0BL5TALERbFtOACbja1KV2nDP4t14"/>
+</div>
+</div>
+<p class="text-center mt-3 font-bold text-sm text-on-surface">Tacos</p>
+</div>
+</div>
+</section>
+<!-- Popular Near You -->
+<section class="bg-surface-container-low py-20">
+<div class="px-8 max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-4xl font-bold tracking-tight mb-3">Popular Near You</h2>
+<p class="text-on-surface-variant text-lg">Top rated selections from your local culinary scene</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Restaurant Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_8px_48px_rgba(78,33,32,0.04)] group cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="upscale restaurant interior with warm lighting and beautifully plated gourmet food" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArEFlTasja-9X2OXrV7hfWiiCNbV5pPKNnCaHuTa-rnDryf1JlgSY2yhO7VPdIfDO4OI5UcjiBHKjqd-I-17ZUU6Z75odkd1vlEJgyoZ3gKubLaJ2GJPaK5edxI_io6-hSeGWJ2pyHXw23CWfWrtU45sAKqBdjZ4Vj1I2QWhqUnyJ1-Ndkfr2Dtoa7JkDMM3JwDZh_GRb0iDCmDnKzaxEG2pko09Q9ADFIfQqW16S1U39lD01JYiaAoBeWIfY-HIOqu__rKC5n3TM"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 font-bold text-sm">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.9
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">The Golden Truffle</h3>
+<span class="text-secondary font-bold">$45+</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Fine Dining • French • Artisanal</p>
+<div class="flex items-center gap-4 text-sm font-medium border-t border-surface pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">schedule</span>
+                                    25-35 min
+                                </div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg">moped</span>
+                                    Free Delivery
+                                </div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_8px_48px_rgba(78,33,32,0.04)] group cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="rustic italian pasta dish with fresh tomatoes, basil, and dusting of parmesan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBguDIpjrQlFDHLW62Ni5D9Pp_JzAo5IzVXZitGYztiSYYPoutjVnqeNK4hCIpuvYBqlA6anHO9TE9HXbNbHbX6JYWLjInlRVApax7b3eK8ryhvhQ6Kq2_FfN045j7m4wXMwh-WwP5r5Eb7OOg8k61qkYYqfp1I07B7B5SGT1zTPjyzc5D5uX0-MlS06rJuMI4HRNLWGoMxV3-QkUQGDVTtj7FHluhWaXjFgHK_J_acmFB6kW1l8VGhqF7W40XaV7bNQPuQQr8ywpw"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 font-bold text-sm">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.7
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Verdant Harvest</h3>
+<span class="text-secondary font-bold">$22+</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Healthy • Vegan • Farm-to-Table</p>
+<div class="flex items-center gap-4 text-sm font-medium border-t border-surface pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">schedule</span>
+                                    15-25 min
+                                </div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">moped</span>
+                                    $2.99
+                                </div>
+</div>
+</div>
+</div>
+<!-- Restaurant Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_8px_48px_rgba(78,33,32,0.04)] group cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="gourmet double-patty burger with specialty sauces and artisan brioche bun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLeDehPyg5VKI2kV5mJA5eliRho-XrSVZVreEvC0IZjFTIcS-KhlzhuQ_IFdcvYzYoRAK_qLfCxAZCxGc_lpCLMCJ-SsCT8_a0i8k_XiEGswDjEcSiq0mkMI1ohnEE00rUjZLFva375xUHiZPG8ccG8HiNI8eKxk5Sa96RAgxFkFrq9jJG28z7mfZWp7wbVuIl8rTPNxsMwoap7ctp0wWTvMDSuWZ086cMu6oZIwbL35_xqy4Y10gtceQceg04_HvCHiKrRVv2mjs"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 font-bold text-sm">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+                                4.8
+                            </div>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 rounded-full font-bold text-xs">
+                                Chef's Choice
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold">Neo Burger Lab</h3>
+<span class="text-secondary font-bold">$18+</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Gourmet Burgers • American • Craft</p>
+<div class="flex items-center gap-4 text-sm font-medium border-t border-surface pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">schedule</span>
+                                    20-30 min
+                                </div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg">moped</span>
+                                    Free Delivery
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Spotlight Section -->
+<section class="py-20 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-primary rounded-lg relative overflow-hidden p-12 text-on-primary flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40" data-alt="vibrant culinary scene showing a chef preparing fresh sushi with artistic precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOjQeix8wGmzXktpSwCHILFrcmVWz7IniqCM4Gf5cmTq804ButQuMEJZkNUhCodnCLp3GgGhZOR0z22lG1eXBorcbz_s2m_7Z5pXTNBCJcMWlKkcAElj09RHH1YVLVbBOwa0lOTJ_yhcsyHcrsLI0bHfhZs6TFbQVK_5w06omyLkn88Rfu0Xq5Ln7-9yZuzVoatPaEyUaSmGsAROkbJpT0yS09Jl6POCyecz_zQdxOJuMCkWPjgmPQ0wkaL7GnGAiXosQKoORGF0"/>
+<div class="relative z-10">
+<h2 class="text-4xl font-extrabold mb-4">Unlock Culinary Mastery</h2>
+<p class="text-lg opacity-90 mb-8 max-w-md">Join our premium membership for exclusive access to Michelin-starred menus and priority delivery.</p>
+<button class="px-8 py-3 bg-white text-primary rounded-full font-bold hover:bg-surface-container-low transition-colors">Join Canvas+</button>
+</div>
+</div>
+<div class="md:col-span-2 bg-secondary rounded-lg relative overflow-hidden p-8 text-on-secondary flex items-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30" data-alt="overhead view of a healthy salad with poached egg and vibrant seasoning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKVDrZT17T7NIs0-9cCFYWWhj_D3id4yB1LBGm_yC98kO2WiKA3THDgJdh5JcG4tY6rMymu1X_EHPRYbGVjQ23s5f1fCZWhVJVpgEcMhumr0bdQoUdHO-uJp67NyEmKW7qDn67b_V2w6EmOuIpgmESSL2CJ9aUfDbAGslvCszY6zo-9NK6FkqhXWS9hGW2eA7setK-X-GFh8V6pxMmDy71GnoWGFdZWB_Ux7N7M2pcd9QYSES0H_ZdH7gSZP0CXgofaMvqhGYA_2k"/>
+<div class="relative z-10">
+<h3 class="text-2xl font-bold mb-2">Wellness Curated</h3>
+<p class="opacity-90">Nutritious meals designed by dietitians.</p>
+</div>
+</div>
+<div class="bg-tertiary-container rounded-lg p-8 flex flex-col justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-4xl mb-4">eco</span>
+<h3 class="text-xl font-bold mb-1">Sustainable</h3>
+<p class="text-sm opacity-80">100% compostable packaging on all orders.</p>
+</div>
+<div class="bg-surface-container-highest rounded-lg p-8 flex flex-col justify-center text-on-surface">
+<span class="material-symbols-outlined text-4xl mb-4">local_shipping</span>
+<h3 class="text-xl font-bold mb-1">Zero-Touch</h3>
+<p class="text-sm opacity-80">Safe, contactless delivery as standard.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#ffedeb] w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 max-w-7xl mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-xl font-bold text-[#4e2120] font-['Plus_Jakarta_Sans']">Culinary Canvas</span>
+<p class="text-sm tracking-wide text-[#4e2120]/60 font-['Be_Vietnam_Pro'] max-w-xs">Elevating the food delivery experience into an editorial journey for the modern epicurean.</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-[#4e2120]/60 cursor-pointer hover:text-[#FF5722]">public</span>
+<span class="material-symbols-outlined text-[#4e2120]/60 cursor-pointer hover:text-[#FF5722]">share</span>
+<span class="material-symbols-outlined text-[#4e2120]/60 cursor-pointer hover:text-[#FF5722]">mood</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#4e2120]">Company</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-sm text-[#4e2120]/60 hover:text-[#FF5722] underline-offset-4 hover:underline transition-all" href="#">About Us</a>
+<a class="text-sm text-[#4e2120]/60 hover:text-[#FF5722] underline-offset-4 hover:underline transition-all" href="#">Sustainability</a>
+<a class="text-sm text-[#4e2120]/60 hover:text-[#FF5722] underline-offset-4 hover:underline transition-all" href="#">Chef Partners</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#4e2120]">Legal</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-sm text-[#4e2120]/60 hover:text-[#FF5722] underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-sm text-[#4e2120]/60 hover:text-[#FF5722] underline-offset-4 hover:underline transition-all" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-[#4e2120]">Newsletter</h4>
+<p class="text-sm text-[#4e2120]/60">Join the epicurean inner circle for weekly tasting notes.</p>
+<div class="flex gap-2">
+<input class="bg-white border-none rounded-full px-4 py-2 text-sm w-full focus:ring-2 focus:ring-primary/20" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-2 rounded-full active:scale-95 transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-12 pt-8 border-t border-[#4e2120]/5 text-center">
+<p class="text-sm tracking-wide text-[#4e2120]/60 font-['Be_Vietnam_Pro']">© 2024 Culinary Canvas. Crafted for the epicurean.</p>
+</div>
+</footer>
+<!-- Bottom Navigation (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fff4f3]/90 backdrop-blur-xl px-6 py-4 flex justify-between items-center z-50">
+<button class="flex flex-col items-center gap-1 text-[#FF5722]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-bold">Browse</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4e2120]/60">
+<span class="material-symbols-outlined">local_offer</span>
+<span class="text-[10px] font-medium">Offers</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4e2120]/60">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Orders</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-[#4e2120]/60">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Favorites - Culinary Canvas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error": "#b31b25",
+                      "secondary": "#176a21",
+                      "background": "#fff4f3",
+                      "tertiary-dim": "#6b4900",
+                      "primary-fixed-dim": "#f56724",
+                      "on-primary": "#ffefea",
+                      "tertiary-container": "#feb300",
+                      "tertiary-fixed": "#feb300",
+                      "on-tertiary-fixed": "#382400",
+                      "on-tertiary-container": "#523700",
+                      "surface-container-highest": "#ffd2d0",
+                      "on-surface-variant": "#834c4b",
+                      "inverse-primary": "#fc6c29",
+                      "surface-container": "#ffe1e0",
+                      "on-primary-container": "#431300",
+                      "secondary-dim": "#025d16",
+                      "on-tertiary-fixed-variant": "#5e4000",
+                      "tertiary-fixed-dim": "#eda600",
+                      "outline-variant": "#e09c99",
+                      "error-container": "#fb5151",
+                      "on-background": "#4e2120",
+                      "on-secondary": "#d1ffc8",
+                      "inverse-on-surface": "#ce8c89",
+                      "secondary-fixed-dim": "#90e28a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-dim": "#8d3100",
+                      "on-secondary-fixed": "#00460e",
+                      "surface-tint": "#a13900",
+                      "primary-container": "#ff793e",
+                      "error-dim": "#9f0519",
+                      "on-error": "#ffefee",
+                      "on-surface": "#4e2120",
+                      "tertiary": "#7b5400",
+                      "on-secondary-container": "#005c15",
+                      "secondary-container": "#9df197",
+                      "inverse-surface": "#240304",
+                      "surface-variant": "#ffd2d0",
+                      "primary": "#a13900",
+                      "surface-dim": "#ffc7c4",
+                      "on-tertiary": "#fff1df",
+                      "secondary-fixed": "#9df197",
+                      "on-secondary-fixed-variant": "#12661e",
+                      "outline": "#a26765",
+                      "surface-container-high": "#ffdad8",
+                      "on-primary-fixed-variant": "#521900",
+                      "primary-fixed": "#ff793e",
+                      "on-error-container": "#570008",
+                      "on-primary-fixed": "#000000",
+                      "surface": "#fff4f3",
+                      "surface-container-low": "#ffedeb",
+                      "surface-bright": "#fff4f3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Be Vietnam Pro"],
+                      "label": ["Be Vietnam Pro"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fff4f3;
+            color: #4e2120;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+      </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<header class="fixed top-0 w-full z-50 bg-[#fff4f3]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_48px_48px_rgba(78,33,32,0.04)]">
+<nav class="flex justify-between items-center h-20 px-8 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-[#a13900] dark:text-[#ff793e] tracking-tight">Culinary Canvas</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-base text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors" href="#">Explore</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-base text-[#a13900] dark:text-[#ff793e] border-b-2 border-[#a13900] pb-1" href="#">Favorites</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-base text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors" href="#">Promotions</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-base text-[#4e2120] dark:text-stone-400 hover:text-[#a13900] transition-colors" href="#">Orders</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#ffedeb] dark:hover:bg-stone-800 transition-all duration-300 active:scale-95 text-[#a13900] dark:text-[#ff793e]">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="p-2 rounded-full hover:bg-[#ffedeb] dark:hover:bg-stone-800 transition-all duration-300 active:scale-95 text-[#a13900] dark:text-[#ff793e]">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto min-h-screen">
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Curated Cravings</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl font-medium">Your personal editorial of the city's finest flavors and most cherished dining destinations.</p>
+</div>
+<div class="flex gap-2 p-1 bg-surface-container-low rounded-full w-fit">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-semibold shadow-sm transition-all duration-200">Dishes</button>
+<button class="px-6 py-2 hover:bg-surface-container-highest rounded-full font-semibold text-on-surface-variant transition-all duration-200">Restaurants</button>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)]">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Gourmet wagyu beef burger with melting cheese, caramelized onions, and artisan bun, dramatic side lighting, vibrant food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb7Fci0-3KHgTGvDvI4sMbsT2nl-L0c0OqtU9NR8QJCQwmZNU1RE8Qg7mB-u7XHwOw2K8c_JMUia9oz81vdmiqrDKJsvmEPlCAkI1DQfzeNC-Bil3g8K6A_lowlKaztqem6JkKY96XT-xfieoOfjwvDO50-sDgnhmPtuCgnUjJKm1vRQtppsY4mH1vc8EotZ0r_LPq9IacuqpphCGxWuin5rf1_MLvDdnZY__-DsGr38OKpZgZ6BGJXm-4DjJ3-9K9kpK9mMjOPIg"/>
+<div class="absolute top-4 left-4 bg-secondary/90 backdrop-blur-md text-on-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Chef's Choice</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">The Heritage Wagyu Burger</h3>
+<span class="text-secondary font-bold">$24.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">Aged wagyu, truffle aioli, house-made brioche, and 12-hour caramelized shallots.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">4.9</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From Burger &amp; Barrel</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)] lg:mt-8">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Lush green harvest bowl with avocado, quinoa, roasted vegetables and poached egg, high-key bright clean lighting, fresh aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtahWDPKBuP_SG4AvLHHgAaneYNsYd-1iFK1nPNNRApnCjcQm_7-BucFGjdGhLTzrTvqLVJWdE6garqnzRTCRRdpcf76m6cKWT2ceEs7aNaP5uBUUuASwZDyLiD1_BxCXLfD1iqbSJbRt-tyBYq49pFQJF4mozz4MkR3x-_-xJO4tsiCZYHMAwKrk_Y-XiBXKepXv7_ccb3sNAWiD4dQcWZ4TGUrmCZAmm1NMMZyN9VX7oJM13RzbZGAcCoMdbWylgEq_Hf-e4IEo"/>
+<div class="absolute top-4 left-4 bg-secondary/90 backdrop-blur-md text-on-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Health Conscious</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">Sun-Kissed Harvest Bowl</h3>
+<span class="text-secondary font-bold">$18.50</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">Seasonal greens, citrus-cured salmon, wild quinoa, and a tahini-lemon drizzle.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">4.7</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From Vitality Kitchen</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)]">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Artisanal sourdough pizza with fresh basil, buffalo mozzarella, and tomato sauce, rustic wood oven background, warm golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfTnQuUKG8H4alperiV-tBqwnlO3eDSxkF5QjETHGY3XZ0iAtbmxykRnLp-X2fHSQd4wNalAHMiMFENlQqiRhuzf7ae19YiNBIcfbD1DCm_-ABgFbZcjj3MzLPaajbfpLbPbPx4noEl2qoyXLZwPbHcgTVi8M5KIp0lLNXkU2j2wmaifznADr4chLVRW40xLlO5sbA8bCxqJ4E0kz0mj8cELR_4bIcwjivF9JE-ZnWGENvTIjlqZr2aYIpqSs81J1SC2QYX_F8_28"/>
+<div class="absolute top-4 left-4 bg-primary/90 backdrop-blur-md text-on-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Top Rated</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">Rustic Margherita Napoletana</h3>
+<span class="text-secondary font-bold">$19.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">Double-fermented dough, San Marzano tomatoes, and fresh house-pulled mozzarella.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">5.0</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From Flora &amp; Flame</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)] lg:-mt-8">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Succulent smoked brisket on a wooden tray with pickles and coleslaw, dark moody lighting, rustic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR9oZTjC6GRu56w9EMQAhaS6rtjTy6O0AcmOnrN_rYsw_afiK_03aIDLcg5PyhAgoedwotDM5Zkm2LGidUvrJcAJHAwuh8WVzqagUNtapk-2JshhbU3beBN-4FMcYFnutVkVtuuomvKBNRtQOUb7isZRC2LmoZPz-FHIO2NLk4OcVT3y5VP_0KbQpFTz93co-5EMn8-LzZ3gXB4bQIy5k4mpSfuKXAQ_3tQt5Dk1aPeK0flnwaxq5QmqrbAvFb4c8LjogL4g3-wNA"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">Oak-Smoked Central Brisket</h3>
+<span class="text-secondary font-bold">$32.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">16-hour slow-smoked Prime brisket, served with espresso BBQ sauce and pickled okra.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">4.8</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From Smoke &amp; Soul</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)]">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Elegant pan-seared scallops with pea puree and edible flowers, fine dining presentation, minimalist aesthetic, soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPOTEwCdQrSL6tfOsAACSIj8jl8Db9B_7wDk1lhRwaI2DIYp6muaN2JeoF_wYwRlTs2f2pPE1G4GOeHmVnU-zpiIsMnXOu6VHXauRUVgsOmCHtPOYrM3QIwqKIRRhOKaQ5OXNjdEvnI81fJ7xs1k0kicaUH49Fj7DxDNG_Kk4xdK9s1nRMyKZL6zN2FpA9AVFaiFjDuqESRHC5LcGcONEYCylFd0X66ydBC-m4D8QhpysPEyZao5RYxVRdK_37idXz5vlz3xcrcuA"/>
+<div class="absolute top-4 left-4 bg-tertiary/90 backdrop-blur-md text-on-tertiary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Premium</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">Diver Scallops &amp; Spring Pea</h3>
+<span class="text-secondary font-bold">$28.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">U10 scallops, minted pea velouté, crispy pancetta, and citrus pearls.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">4.9</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From The Glass House</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+<div class="group relative flex flex-col bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:shadow-[0_48px_48px_rgba(78,33,32,0.08)] lg:mt-8">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Decadent chocolate lava cake with raspberry coulis and powdered sugar, dark rich food aesthetic, warm romantic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG5T45p7YGYY7JxzvZ3muMFv1rPuDusooiWz5CG1a-p-963Cdw1MJZX1VEbwOX4GsUrSKUPVTqmTTqlNLU-P40JIKYbrT9OA74MOzJJGD6hCKWDAPYeLbcoAcs1mmY-BCuYyEC2ctBSs8Vhi0gxgUN0572mVfiGSl5VWHhdWwCnDz5n0g6FrXEOGqOqMtAqv40fwBudUe8SX-Y2h2LgOJ2thkOiaXQDj-TaLiWsYodTf4QVR_nQi9o8XP6abRFIQGBy1xvY0g2NQE"/>
+<button class="absolute top-4 right-4 p-2 bg-white/80 backdrop-blur-md rounded-full text-primary hover:bg-white transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold leading-tight">Dark Chocolate Melting Heart</h3>
+<span class="text-secondary font-bold">$14.00</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4 line-clamp-2 font-medium">70% Valrhona chocolate, Tahitian vanilla bean gelato, and framboise reduction.</p>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center gap-1 bg-tertiary-container/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-on-tertiary-container">4.6</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">From Velvet &amp; Crumb</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-full font-bold flex items-center justify-center gap-2 transition-all active:scale-95 bg-gradient-to-r from-primary to-primary-container">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                        Order Again
+                    </button>
+</div>
+</div>
+</section>
+<section class="mt-24">
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface mb-8">Beloved Establishments</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-center gap-6 p-6 bg-surface-container-low rounded-lg transition-all duration-300 hover:bg-surface-container hover:shadow-sm">
+<div class="w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Modern high-end restaurant interior with ambient lighting and sleek design, professional photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMf0OvG_lVS7DcLCbfn6BnVmVDITn24YvRDMEepTk0TJQ3n7RsjvMeMHqXWawT9Q1Orfo7YiaQsUWmRgYM36pCik8MPKNzGHYuOl5_UoVpd5LayJQ7yRIQE1DNy5-GVEyP6fO_DsMlh2yM-jT62dJB0BOsZYMSuBHmGlm5jFJI6u4ixxhw7HrwHyRT3nhUW6e0gq7eQImkvswiNJQ-hebOZRgCVh2y5fJkBj2JZIAD8QdT-iwywgr8W28hL0V2bKszmXC_l-E6B9Q"/>
+</div>
+<div class="flex-grow">
+<h4 class="text-xl font-bold mb-1">Burger &amp; Barrel</h4>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-semibold bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Gourmet Burgers</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.8 (1.2k+)</span>
+</div>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                            View Menu <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 bg-surface-container-low rounded-lg transition-all duration-300 hover:bg-surface-container hover:shadow-sm">
+<div class="w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Luxury bistro exterior with warm light flowing through windows, evening atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQe24_xeddX20kn5i6BTnJaInsG5XuxmwAd8LrPHTiN6rfID_LQWpG8FaAko61WHkX1d_sRdQ6wqLfqqp4EBU7NcpBuCB_LnJEUDjkJkJnzSJm66mFZ9Vx0Mz_w-jWJl7RYRla8vxsCPndPjpw5tmkLA-yjsZY6Fe6BsXHNFKJgN6eoKc8bYNAXVxhfaI3cO6KTWWtjxoBsUuyq3aM8Rf6zmiwM-rntKMYKPpQcF-6pU-ftLGu5sK3JjlXRNIyXYd2h0iFhz1ITEk"/>
+</div>
+<div class="flex-grow">
+<h4 class="text-xl font-bold mb-1">The Glass House</h4>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-semibold bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded">Contemporary French</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9 (850+)</span>
+</div>
+</div>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                            View Menu <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#ffedeb] dark:bg-stone-900 w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-screen-2xl mx-auto font-['Be_Vietnam_Pro'] text-sm">
+<div>
+<div class="text-lg font-bold text-[#4e2120] dark:text-stone-200 mb-2">Culinary Canvas</div>
+<p class="text-[#4e2120]/70 dark:text-stone-400">© 2024 Culinary Canvas. Crafted for the epicurean.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">About Us</a>
+<a class="text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Chef Partners</a>
+<a class="text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Privacy Policy</a>
+<a class="text-[#4e2120]/70 dark:text-stone-400 hover:text-[#a13900] dark:hover:text-[#ff793e] underline-offset-4 hover:underline transition-all duration-200" href="#">Contact Support</a>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-surface-container-lowest/80 backdrop-blur-xl px-6 py-4 rounded-full shadow-[0_48px_48px_rgba(78,33,32,0.12)] border border-white/20 flex items-center gap-8 md:hidden z-50">
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-bold">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[10px] font-bold">Favorites</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="local_offer">local_offer</span>
+<span class="text-[10px] font-bold">Offers</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] font-bold">Orders</span>
+</button>
+</div>
+</body></html>
