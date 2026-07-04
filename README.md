@@ -89,3 +89,14 @@ The global state manager for user security and session integrity.
 ---
 
 > Built with ❤️ by Antigravity
+
+
+## Suggested GitHub Topics
+
+~~~text
+react vite frontend web-app food-website landing-page
+~~~
+
+## License
+
+This project is available under the MIT License. See [LICENSE](LICENSE).
